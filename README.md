@@ -62,7 +62,7 @@ Project\_Root/\
 This trains the AI to understand the relationship between RGB colors and Spectral curves.
 
 - **Input:** .mat files in the dataset/ folder.
-- **Command:**\
+- **Command:**
 ```
   python train.py
 ```
@@ -72,27 +72,27 @@ This trains the AI to understand the relationship between RGB colors and Spectra
 Takes a normal photo and generates the spectral data cube.
 
 - **Input:** Images inside input\_images/.
-- **Command:**\
+- **Command:**
 ```
-  python inference\_tiled.py
+  python inference_tiled.py
 ```
 - **Output:** Generates .mat files in output\_mats/.
 ### **Step 3: Flatten to Spectral Library (CSV)**
 Converts the 3D image data into a single spectral signature row, matching laboratory standards.
 
 - **Logic:** Applies background masking (threshold > 0.05), scales units (x100), and resamples bands.
-- **Command:**\
+- **Command:**
 ```
-  python mat\_to\_csv\_resampled.py
+  python mat_to_csv_resampled.py
 ```
 - **Output:** Creates Final\_Dataset\_Lab\_Matched.csv.
 ### **Step 4: Classify the Crop**
 Predicts the crop name based on the generated spectral signature.
 
 - **Prerequisite:** Ensure Ghisaconus\_2008\_001\_speclib\_updated.csv is in the root folder.
-- **Command:**\
+- **Command:**
 ```
-  python classify\_crops.py
+  python classify_crops.py
 ```
 - **Output:** Prints the predicted Crop Name and Stage to the console and saves Final\_Crop\_Predictions.csv.
 ## **7. Troubleshooting Common Issues**
