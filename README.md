@@ -9,13 +9,13 @@ This project provides a complete software pipeline to convert standard RGB image
 ## **2. System Architecture**
 The workflow consists of three distinct stages:
 
-1. **Reconstruction (RGB** ![ref1] **.MAT):**
+1. **Reconstruction (RGB** -> **.MAT):**
    1. Input: Standard JPEG/PNG Crop Image.
    1. Model: ResNet-based Generator + PatchGAN Discriminator.
-   1. Output: Hyperspectral Cube (Height ![ref2] Width ![ref2] Bands).
-1. **Flattening ( .MAT** ![ref1] **.CSV):**
+   1. Output: Hyperspectral Cube (Height X Width X Bands).
+1. **Flattening ( .MAT** -> **.CSV):**
    1. Process: Extracts the leaf area (ignoring background), calculates the mean spectral signature, and interpolates values to match laboratory sensor standards.
-1. **Classification (.CSV** ![ref1] **Prediction):**
+1. **Classification (.CSV** -> **Prediction):**
    1. Model: XGBoost Classifier trained on ground-truth spectral libraries.
    1. Output: "Corn", "Soybean", "Rice", etc.
 ## **3. Data Sources & Modifications**
