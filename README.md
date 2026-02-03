@@ -37,8 +37,9 @@ This project relies on two specific datasets, modified to ensure compatibility b
 - **RAM:** 16GB System RAM.
 ### **Software**
 Install the required Python libraries:
-
+```python
 pip install torch torchvision numpy pandas scipy h5py opencv-python matplotlib scikit-learn xgboost joblib
+```
 ## **5. Directory Structure (Crucial)**
 Ensure your project folder is organized exactly as follows for the scripts to run without errors:
 
